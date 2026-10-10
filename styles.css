@@ -395,7 +395,7 @@ img {
     pointer-events: none;
 }
 
-/* Buta SVG Watermarks (Contained to prevent horizontal scrolling) */
+/* Buta SVG Watermarks */
 .buta-watermark-left, .buta-watermark-right {
     position: absolute;
     width: 280px;
@@ -601,7 +601,7 @@ img {
     flex-wrap: wrap;
 }
 
-/* Dual Carpet Frame for About Images (Redesigned for Full Uncut Bed Photo) */
+/* Dual Carpet Frame for About Images */
 .carpet-frame-dual {
     display: flex;
     flex-direction: column;
@@ -937,7 +937,7 @@ img {
 }
 
 /* -------------------------------------------------------------
-   FOOTER (REDESIGNED & NO TEXT OVERLAP)
+   FOOTER
 ------------------------------------------------------------- */
 .main-footer {
     background: #0B0205;
@@ -1161,7 +1161,7 @@ img {
 }
 
 /* -------------------------------------------------------------
-   RESPONSIVE MEDIA QUERIES (MOBILE STABILITY FIXES)
+   RESPONSIVE MEDIA QUERIES (MOBILE CENTERING & STABILITY)
 ------------------------------------------------------------- */
 @media (max-width: 1024px) {
     .hero-container {
@@ -1169,10 +1169,6 @@ img {
         gap: 40px;
     }
     
-    .hero-title {
-        font-size: 2.7rem;
-    }
-
     .about-grid, .contact-grid, .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1224,21 +1220,53 @@ img {
         display: none;
     }
 
-    .hero-title {
-        font-size: 2rem;
+    /* Mobile Centered Hero Content */
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .section-title {
-        font-size: 1.9rem;
+    .hero-title {
+        font-size: 2.1rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-description {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        width: 100%;
     }
 
     .hero-stats {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .stat-item {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .stat-ornament { display: none; }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
 
     .about-features-list {
         grid-template-columns: 1fr;
