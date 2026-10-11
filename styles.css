@@ -530,31 +530,33 @@ img {
     display: block;
 }
 
-.frame-badge {
+.hero-center-badge {
     position: absolute;
-    bottom: 22px;
-    left: 22px;
-    background: rgba(23, 6, 10, 0.92);
-    border: 1.5px solid var(--gold-primary);
-    padding: 8px 18px;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(23, 6, 10, 0.95);
+    border: 2px solid var(--gold-primary);
+    padding: 9px 24px;
     border-radius: var(--radius-full);
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
-    backdrop-filter: blur(8px);
-    z-index: 2;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.25);
+    backdrop-filter: blur(10px);
+    z-index: 6;
+    white-space: nowrap;
 }
 
-.badge-logo {
+.hero-center-badge .badge-logo {
     width: 28px;
     height: 28px;
     object-fit: contain;
 }
 
-.frame-badge span {
+.hero-center-badge span {
     font-family: var(--font-heading);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--gold-light);
     letter-spacing: 0.5px;
@@ -1305,19 +1307,25 @@ img {
         object-position: center center;
     }
 
-    .frame-badge {
-        bottom: 16px;
-        left: 16px;
-        padding: 6px 14px;
+    .hero-image-box {
+        margin: 15px auto 32px auto;
+        width: 100%;
+        position: relative;
     }
 
-    .frame-badge span {
-        font-size: 0.85rem;
+    .hero-center-badge {
+        bottom: -15px;
+        padding: 7px 18px;
+        gap: 8px;
     }
 
-    .badge-logo {
-        width: 24px;
-        height: 24px;
+    .hero-center-badge span {
+        font-size: 0.9rem;
+    }
+
+    .hero-center-badge .badge-logo {
+        width: 22px;
+        height: 22px;
     }
 
     .hero-buttons {
@@ -1326,7 +1334,7 @@ img {
         gap: 12px;
         width: 100%;
         max-width: 320px;
-        margin: 10px auto 30px auto;
+        margin: 20px auto 30px auto;
     }
 
     .hero-buttons .btn {
