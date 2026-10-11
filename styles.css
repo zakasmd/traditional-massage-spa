@@ -440,33 +440,36 @@ img {
 
 .hero-image-box {
     position: relative;
-    margin: 10px auto 40px auto;
+    margin: 15px auto 40px auto;
     width: 100%;
-    max-width: 900px;
+    max-width: 860px;
 }
 
 .hero-images-row {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 24px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .hero-images-row .carpet-frame {
-    flex: 1;
-    min-width: 220px;
-    max-width: 420px;
+    flex: 1 1 320px;
+    max-width: 400px;
+    position: relative;
 }
-
 
 .hero-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 18px;
-    margin-bottom: 40px;
+    gap: 16px;
+    margin: 0 auto 35px auto;
     width: 100%;
+    position: relative;
+    z-index: 5;
 }
 
 .hero-stats {
@@ -509,52 +512,52 @@ img {
     font-size: 0.8rem;
 }
 
-
-
-
 .carpet-frame {
     position: relative;
     border-radius: var(--radius-lg);
-    padding: 14px;
-    background: linear-gradient(145deg, rgba(212, 175, 55, 0.5), rgba(74, 22, 35, 0.9));
-    box-shadow: var(--shadow-card), 0 0 40px rgba(212, 175, 55, 0.15);
+    padding: 12px;
+    background: linear-gradient(145deg, rgba(212, 175, 55, 0.4), rgba(74, 22, 35, 0.85));
+    box-shadow: var(--shadow-card), 0 0 35px rgba(212, 175, 55, 0.12);
+    overflow: hidden;
 }
-
 
 .hero-main-img {
     width: 100%;
-    height: 480px;
+    height: 380px;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
     border-radius: calc(var(--radius-lg) - 6px);
     display: block;
 }
 
 .frame-badge {
     position: absolute;
-    bottom: -20px;
-    left: 30px;
-    background: var(--bg-surface);
-    border: 2px solid var(--gold-primary);
-    padding: 10px 24px;
+    bottom: 22px;
+    left: 22px;
+    background: rgba(23, 6, 10, 0.92);
+    border: 1.5px solid var(--gold-primary);
+    padding: 8px 18px;
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
-    gap: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    gap: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    z-index: 2;
 }
 
 .badge-logo {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
 }
 
 .frame-badge span {
     font-family: var(--font-heading);
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--gold-light);
+    letter-spacing: 0.5px;
 }
 
 /* -------------------------------------------------------------
@@ -1278,9 +1281,58 @@ img {
         margin-right: auto;
     }
 
-    .hero-buttons {
-        justify-content: center;
+    /* Mobile Hero Images & Buttons */
+    .hero-image-box {
+        margin: 15px auto 25px auto;
         width: 100%;
+    }
+
+    .hero-images-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .hero-images-row .carpet-frame {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-main-img {
+        height: 280px;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .frame-badge {
+        bottom: 16px;
+        left: 16px;
+        padding: 6px 14px;
+    }
+
+    .frame-badge span {
+        font-size: 0.85rem;
+    }
+
+    .badge-logo {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px;
+        margin: 10px auto 30px auto;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.95rem;
     }
 
     .hero-stats {
