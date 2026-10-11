@@ -442,8 +442,23 @@ img {
     position: relative;
     margin: 10px auto 40px auto;
     width: 100%;
-    max-width: 440px;
+    max-width: 900px;
 }
+
+.hero-images-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.hero-images-row .carpet-frame {
+    flex: 1;
+    min-width: 220px;
+    max-width: 420px;
+}
+
 
 .hero-buttons {
     display: flex;
@@ -494,10 +509,8 @@ img {
     font-size: 0.8rem;
 }
 
-/* Carpet Frame for Main Hero Image */
-.hero-image-box {
-    position: relative;
-}
+
+
 
 .carpet-frame {
     position: relative;
@@ -505,9 +518,8 @@ img {
     padding: 14px;
     background: linear-gradient(145deg, rgba(212, 175, 55, 0.5), rgba(74, 22, 35, 0.9));
     box-shadow: var(--shadow-card), 0 0 40px rgba(212, 175, 55, 0.15);
-    max-width: 440px;
-    margin: 0 auto;
 }
+
 
 .hero-main-img {
     width: 100%;
