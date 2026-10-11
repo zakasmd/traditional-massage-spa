@@ -485,13 +485,17 @@ img {
     padding: 14px;
     background: linear-gradient(145deg, rgba(212, 175, 55, 0.5), rgba(74, 22, 35, 0.9));
     box-shadow: var(--shadow-card), 0 0 40px rgba(212, 175, 55, 0.15);
+    max-width: 440px;
+    margin: 0 auto;
 }
 
 .hero-main-img {
     width: 100%;
     height: 480px;
     object-fit: cover;
+    object-position: center top;
     border-radius: calc(var(--radius-lg) - 6px);
+    display: block;
 }
 
 .frame-badge {
